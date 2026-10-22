@@ -1,6 +1,7 @@
 # BoomRate2
 
 [![CI](https://github.com/cndecoursey/BoomRate2/actions/workflows/ci.yml/badge.svg)](https://github.com/cndecoursey/BoomRate2/actions/workflows/ci.yml)
+[![Documentation Status](https://readthedocs.org/projects/boomrate2/badge/?version=latest)](https://boomrate2.readthedocs.io/en/latest/)
 
 BoomRate2 computes supernova (SN) control times and volumetric rates for imaging surveys with
 multi-filter, multi-epoch selection criteria. It succeeds
@@ -18,7 +19,8 @@ The calculation proceeds in five stages:
    association are applied as weights, without re-simulation.
 5. **Rates.** Control times are combined with the survey volume and observed counts.
 
-The design specification is in [`docs/design.md`](docs/design.md). The project is in early
+Documentation, including the design specification, is at
+[boomrate2.readthedocs.io](https://boomrate2.readthedocs.io/en/latest/). The project is in early
 development and its interfaces may change.
 
 ## Installation
@@ -37,6 +39,10 @@ pytest
 ```
 
 Tests marked `gpu` run only when CuPy and a CUDA device are available.
+
+## Contributing
+
+See the [contributing guide](https://boomrate2.readthedocs.io/en/latest/contributing.html).
 
 ## License
 
