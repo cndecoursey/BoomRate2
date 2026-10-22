@@ -62,6 +62,6 @@ The active array backend can be checked from Python:
 ```python
 import boomrate2
 
-boomrate2.set_backend("auto")   # selects CuPy when a CUDA device is available
+boomrate2.set_backend("auto")  # selects CuPy when a CUDA device is available
 print(boomrate2.get_backend())  # "cupy" or "numpy"
 ```
