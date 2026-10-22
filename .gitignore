@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Tooling
+.ruff_cache/
+.ipynb_checkpoints/
+.DS_Store
+
+# Documentation
+docs/_build/
+
+# Large data products (keep out of version control)
+*.fits
+*.h5
+*.hdf5
+*.zarr/
+/data/
