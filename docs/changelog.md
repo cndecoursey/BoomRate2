@@ -14,3 +14,9 @@ Notable changes to BoomRate2 are recorded here. The format follows
   hooks.
 - Documentation hosted on Read the Docs: design specification, installation guide, contributing
   guide, API reference, and this changelog.
+
+### Changed
+
+- The `gpu` extra now installs the CUDA 12 runtime libraries from PyPI (`cupy-cuda12x[ctk]`), so
+  a local CUDA Toolkit is no longer required.
+- Ruff is pinned to the same version in continuous integration and the pre-commit hooks.
