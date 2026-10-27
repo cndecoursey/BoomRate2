@@ -31,20 +31,23 @@ Choose the command appropriate to the machine:
 | Machine | Command |
 |---|---|
 | CPU only (e.g., macOS) | `pip install -e ".[dev]"` |
-| NVIDIA GPU with CUDA 12 | `pip install -e ".[dev,gpu]"` |
+| NVIDIA GPU (driver supporting CUDA 12 or later) | `pip install -e ".[dev,gpu]"` |
 
 The `-e` flag installs the package in editable mode: Python imports the files in the clone
 directly, so edits take effect without reinstalling. Reinstallation is required only when
 `pyproject.toml` changes.
 
-On a GPU machine, confirm the driver's supported CUDA version with `nvidia-smi` before
-installing.
+On a GPU machine, run `nvidia-smi` before installing and confirm that the reported
+CUDA version is 12.0 or later. Newer drivers (e.g., CUDA 13) are backward compatible.
+The `gpu` extra installs CuPy together with the CUDA 12 runtime libraries (cuBLAS,
+cuFFT, NVRTC, and others) from PyPI, so a separate CUDA Toolkit installation is not
+required.
 
 ### Optional dependency groups
 
 | Group | Contents | Purpose |
 |---|---|---|
-| `gpu` | CuPy (CUDA 12 build) | GPU execution of the detection kernel |
+| `gpu` | CuPy (CUDA 12 build) and CUDA 12 runtime libraries | GPU execution of the detection kernel |
 | `test` | pytest, pytest-cov | Running the test suite |
 | `docs` | Sphinx, MyST, Furo | Building this documentation |
 | `dev` | `test`, `docs`, ruff, pre-commit | Development |

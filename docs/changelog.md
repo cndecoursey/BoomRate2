@@ -20,3 +20,6 @@ Notable changes to BoomRate2 are recorded here. The format follows
 - Design specification: added phase extrapolation (Section 6), the subtraction-residual noise
   model and detection efficiency (Section 7), the separation of detectability from position
   weights (Section 8), and the corresponding schema fields and open questions.
+- The `gpu` extra now installs the CUDA 12 runtime libraries from PyPI (`cupy-cuda12x[ctk]`), so
+  a local CUDA Toolkit is no longer required.
+- Ruff is pinned to the same version in continuous integration and the pre-commit hooks.
