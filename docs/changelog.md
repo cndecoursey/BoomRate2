@@ -14,3 +14,9 @@ Notable changes to BoomRate2 are recorded here. The format follows
   hooks.
 - Documentation hosted on Read the Docs: design specification, installation guide, contributing
   guide, API reference, and this changelog.
+
+### Changed
+
+- Design specification: added phase extrapolation (Section 6), the subtraction-residual noise
+  model and detection efficiency (Section 7), the separation of detectability from position
+  weights (Section 8), and the corresponding schema fields and open questions.
